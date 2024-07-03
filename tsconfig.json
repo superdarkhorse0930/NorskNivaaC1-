@@ -21,8 +21,7 @@
       "@/data/*": ["data/*"],
       "@/layouts/*": ["layouts/*"],
       "@/css/*": ["css/*"],
-      "contentlayer/generated": ["./.contentlayer/generated"]
-    },
+      "contentlayer/generated": ["./.contentlayer/generated"]},
     "plugins": [
       {
         "name": "next"
@@ -39,10 +38,9 @@
     "**/*.json",
     ".contentlayer/generated",
     ".contentlayer/generated/**/*.json",
-    ".next/types/**/*.ts",
-  ],
-  "exclude": ["node_modules"]
-}
+    ".next/types/**/*.ts", ],
+  "exclude": ["node_modules"]}
+
 JSON
 "scripts":{
   "scripts": {
