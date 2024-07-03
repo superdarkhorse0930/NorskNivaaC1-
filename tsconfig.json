@@ -38,7 +38,7 @@
     "**/*.tsx",
     "**/*.json",
     ".contentlayer/generated",
-    ".contentlayer/generated/**/*.json",
+    ".contentlayer/generated/**/*.json"
     ".next/types/**/*.ts"
   ],
   "exclude": ["node_modules"]
