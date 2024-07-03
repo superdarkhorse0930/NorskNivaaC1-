@@ -41,4 +41,4 @@
     ".next/types/**/*.ts", ],
   "exclude": ["node_modules"]}
 
-"scripts":{"scripts": {"dev": "next dev"}
+
