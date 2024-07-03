@@ -41,5 +41,4 @@
     ".next/types/**/*.ts", ],
   "exclude": ["node_modules"]}
 
-JSON
-"scripts":{"scripts": {"dev": "next dev"}
+JSON "scripts":{"scripts": {"dev": "next dev"}
