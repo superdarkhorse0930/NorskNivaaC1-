@@ -1,0 +1,98 @@
+/*
+  Based on TailwindCSS recommendations,
+  consider using classes instead of the `@apply` directive
+  @see https://tailwindcss.com/docs/reusing-styles#avoiding-premature-abstraction
+*/
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply text-[100%] m-0 p-0;
+}
+
+
+.task-list-item::before {
+  @apply hidden;
+}
+
+.task-list-item {
+  @apply list-none;
+}
+
+.footnotes {
+  @apply pt-8 mt-12 border-t border-gray-200 dark:border-gray-700;
+}
+
+.data-footnote-backref {
+  @apply no-underline;
+}
+
+.csl-entry {
+  @apply my-5;
+}
+
+/* holy grail 3-column layout */
+/* grid container */
+.holy-grail-bottom-footer-grid {
+  @apply grid grid-rows-[auto_1fr_auto_auto_auto] min-h-screen min-h-[100svh] md:grid-cols-[1fr_1fr] md:grid-rows-[auto_1fr_auto_auto] lg:grid-cols-[repeat(4,1fr)] lg:grid-rows-[auto_1fr_auto];
+  grid-template-areas:
+    "header"
+    "main-content"
+    "left-sidebar"
+    "right-sidebar"
+    "footer";
+
+  /* fallback height */
+
+  /* new small viewport height for modern browsers */
+}
+
+/* general column padding */
+.holy-grail-bottom-footer-grid > * {
+  @apply p-4;
+}
+
+/* assign columns to grid areas */
+.holy-grail-bottom-footer-grid > .header {
+  grid-area: header;
+  background: #f97171;
+}
+.holy-grail-bottom-footer-grid > .main-content {
+  grid-area: main-content;
+  background: #fff;
+}
+.holy-grail-bottom-footer-grid > .left-sidebar {
+  grid-area: left-sidebar;
+  background: #f5d55f;
+}
+.holy-grail-bottom-footer-grid > .right-sidebar {
+  grid-area: right-sidebar;
+  background: #c5ed77;
+}
+.holy-grail-bottom-footer-grid > .footer {
+  grid-area: footer;
+  background: #72c2f1;
+}
+
+/* tablet breakpoint */
+@media (min-width: 768px) {
+  .holy-grail-bottom-footer-grid {
+    grid-template-areas:
+      "header header"
+      "main-content main-content"
+      "left-sidebar right-sidebar"
+      "footer footer";
+  }
+}
+
+/* desktop breakpoint */
+@media (min-width: 1024px) {
+  .holy-grail-bottom-footer-grid {
+    grid-template-areas:
+      "header header header header"
+      "left-sidebar main-content main-content right-sidebar"
+      "footer footer footer footer";
+  }
+}
